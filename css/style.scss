@@ -1,0 +1,253 @@
+@font-face {
+	font-family: "satoshi";
+	src: url(../Fonts/Variable/Satoshi-Variable.ttf);
+}
+
+// GENERAL RULES 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	color: #E8E7EE;
+
+}
+
+button{
+	cursor: pointer;
+	transition: scale 200ms ease-in-out;
+	&:hover{
+		scale: 1.1;
+	}
+}
+
+// MEDIA QUERIES 
+$breakpoints: (
+	"xs": 0,
+	"sm": 480px,
+	"md": 720px,
+	"lg": 960px,
+	"xl": 1200px,
+);
+
+.container{
+	margin:  auto 38px;
+	max-width: 1364px;
+}
+
+@media (min-width: 1364px) {
+	.container{
+		margin: 0  auto ;
+	}
+}
+
+.dark_bg{
+	background-color: #000000;
+	border-radius: 0 0 10px 10px ;
+}
+
+body{
+
+	font-family: "satoshi";
+	background-color: #F3F5F7;
+	
+	nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 0;
+		.logo{
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 41px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #000000;
+		}
+		.nav_btn{
+			width: 145px;
+			height: 40px;
+			left: 1254px;
+			top: 17px;
+			background: linear-gradient(218.09deg, rgba(248, 155, 166, 0.8) 21.82%, rgba(255, 211, 191, 0.8) 76.1%), url(.png), #FFFFFF;
+			border-radius: 338px;
+			font-style: normal;
+			border: none;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 19px;
+			color: #000000;
+		}
+	}
+	
+
+	// THE MAIN TITLE
+	main{
+		.banner{
+			background-color: #E8E7EE;
+			min-height: 463px;
+			// width: 1364px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			border-radius: 20px;
+			border-top: 1px solid #000000;
+			border-left: 1px solid #000000;
+			border-right: 1px solid #000000;
+			.title{
+				font-size: 80px;
+				font-weight: 900;
+				line-height: 108px;
+				letter-spacing: 0em;
+				text-align: center;
+			}
+			p{
+				text-align: center;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 22px;
+				letter-spacing: 0em;
+			}
+
+		}
+	}
+
+	// questions
+	.questions{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+
+		// grid-template-rows:repeat(3, 1fr);
+		.question{
+			margin-top: 1px;
+			background: #F3F5F7;
+			min-height: 348px;
+			border-radius: 10px;
+			// border-top: 1px solid #000000;
+			// border-bottom: 0.5px solid #000000;
+			padding:  35px 29px;
+			h2{
+				font-size: 40px;
+				font-weight: 900;
+				line-height: 54px;
+				letter-spacing: 0em;
+				margin-bottom: 13px;
+			}
+			p{
+				font-style: normal;
+				// font-weight: 500;
+				font-size: 30px;
+				line-height: 41px;
+				color: #000000;
+			}
+			span{
+				font-weight: bold;
+			}
+		}
+		.left{
+			border-left: 1px solid #000000;
+			border-right: 1px solid #000000;
+		}
+		.right{
+			border-right: 1px solid #000000;
+		}
+		:nth-child(5){
+			margin-bottom: 1px;
+		}
+		:nth-child(6){
+			margin-bottom: 1px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	// features  
+	.feat_sec{
+		color: #E8E7EE;			
+		padding: 60px 0;
+		margin-bottom: 13px;
+		border-radius: 10px;
+		h1{
+			text-transform: capitalize;
+			font-weight: 900;
+			font-size: 40px;
+			line-height: 54px;
+			margin-bottom: 13px;
+			padding: 0 29px;
+		}
+		.features{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+			.feature{
+				font-weight: 500;
+				font-size: 30px;
+				line-height: 41px;
+				padding: 13px 29px;
+				.features_icon{
+					width: 30px;
+					height: 22px;
+					margin-right: 13px;
+				}
+			}
+		}
+	}
+
+	// footer
+	footer{
+		background-color: #000000;
+		color: #E8E7EE;
+		padding: 18px 0;
+		margin-bottom: 20px;
+		.footer_sec{
+			display: flex;
+			justify-content: space-between;
+			.call_to_action{
+				p{
+					display: flex ;
+					align-items: center;
+					font-weight: 700;
+					font-size: 12px;
+					line-height: 16px;
+					.oval{
+						width: 28px;
+						height: 21px;
+						margin-right: 10px;
+					}
+					a{
+						padding-left: 5px;
+						transition: color 200ms ease-in-out;
+						font-size: 12px;
+						font-weight: lighter;
+						&:hover{
+							color: #84CCE3CC;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1000px){
+	body {
+		main{
+			.banner{
+				height: 341px;
+				.title{
+					// color: red;
+					// font-weight: 900;
+					font-size: 40px;
+					line-height: 50px;
+				}
+			}
+		}
+	}
+}
